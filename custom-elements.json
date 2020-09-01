@@ -1,0 +1,94 @@
+{
+  "version": 2,
+  "tags": [
+    {
+      "name": "dile-dni-generator-input",
+      "description": "The user introduces their dni numbers and their related letter is automatically calculated",
+      "properties": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "Set initial value to the input. This property syncs to the input field value property",
+          "default": ""
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "description": "Set a placeholder to the input element",
+          "default": ""
+        },
+        {
+          "name": "disabled",
+          "type": "Boolean",
+          "description": "Disable the input field",
+          "default": false
+        }
+      ],
+      "events": ["backspace-pressed"],
+      "slots": [],
+      "cssProperties": [
+        {
+          "name": "--dile-dni-generator-input-width",
+          "description": "Input element width"
+        },
+        {
+          "name": "--dile-dni-generator-input-border-width",
+          "description": "Input element border width"
+        }, 
+        {
+          "name": "--dile-dni-generator-input-border-color",
+          "description": "Input element border color"
+        },
+        {
+          "name": "--dile-dni-generator-input-border-radius",
+          "description": "Input element border radius"
+        },
+        {
+          "name": "--dile-dni-generator-input-focus-border-color",
+          "description": "Input element border on focus"
+        },
+        {
+          "name": "--dile-dni-generator-input-disabled-border-color",
+          "description": "Input element border when disabled"
+        },
+        {
+          "name": "--dile-dni-generator-input-font-size",
+          "description": "Input element font size"
+        }, 
+        {
+          "name": "--dile-dni-generator-input-line-height",
+          "description": "Input element line height"
+        },
+        {
+          "name": "--dile-dni-generator-input-label-font-family",
+          "description": "Font family for the label "
+        },
+        {
+          "name": "--dile-dni-generator-input-label-font-size",
+          "description": "Font size for the label"
+        },
+        {
+          "name": "--dile-dni-generator-input-label-color",
+          "description": "Color for the label text"
+        },
+        {
+          "name": "--dile-dni-generator-input-label-font-weight",
+          "description": "Label text font weight"
+        }, 
+        {
+          "name": "--dile-dni-generator-input-label-margin-bottom",
+          "description": "Label marging bottom"
+        },
+        {
+          "name": "--dile-dni-generator-input-background-color",
+          "description": "Color for the background input element"
+        }, 
+        {
+          "name": "--dile-dni-generator-input-padding",
+          "description": "Padding for the input text"
+        },
+        {}
+      ]
+    }
+  ]
+}
