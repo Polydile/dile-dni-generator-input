@@ -32,7 +32,9 @@ import 'dile-dni-generator-input/dile-dni-generator-input.js';
 
 ```js preview-story
 export const Simple = () => html`
-  <dile-dni-generator-input ></dile-dni-generator-input>
+  <dile-dni-generator-input
+   placeholder="Please insert DNI numbers"
+   ></dile-dni-generator-input>
 `;
 ```
 
@@ -41,7 +43,19 @@ export const Simple = () => html`
 ###### Custom label
 
 ```js preview-story
-export const CustomLabel = () => html`
-  <dile-dni-generator-input label="DNI letter generator input"></dile-dni-generator-input>
+export const CustomDNI = () => html`
+  <style>
+  .customized {
+    --dile-input-border-radius: 16px;
+    --dile-input-label-margin-bottom: 12px;
+    }
+  </style>
+
+    <dile-dni-generator-input
+    class="customized"
+    id="dniInput"
+    placeholder="Please insert DNI numbers"
+    label="DNI letter generator input"
+    ></dile-dni-generator-input>
 `
 ```

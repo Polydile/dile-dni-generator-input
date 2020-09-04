@@ -18,9 +18,19 @@
 
     render(
       html`
-        <dile-dni-generator-input>
-        </dile-dni-generator-input>
-      `,
+      <style>
+      .customized {
+        --dile-input-border-radius: 16px;
+        --dile-input-label-margin-bottom: 12px;
+        }
+      </style>
+
+        <dile-dni-generator-input
+        class="customized"
+        id="dniInput"
+        placeholder="Please insert DNI numbers"
+        label="DNI letter generator input"
+        ></dile-dni-generator-input>`,
       document.querySelector('#demo')
     );
   </script>
