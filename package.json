@@ -1,6 +1,6 @@
 {
   "name": "dile-dni-generator-input",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The user introduces their dni numbers and their related letter is automatically calculated",
   "author": "vadocondes",
   "license": "MIT",
