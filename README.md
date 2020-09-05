@@ -20,6 +20,17 @@ npm i dile-dni-generator-input
 
 ## Properties
 
+## Styles
+
+You can customize it using CSS Custom Properties.
+
+Custom property | Description | Default
+----------------|-------------|---------
+--dile-dni-generator-input-label-padding | Padding for the label | 0.5em
+--dile-dni-generator-input-label-font-family | Font family for the label | Helvetica, sans-serif
+--dile-dni-generator-input-font-family | Font family for the label | Helvetica, sans-serif
+
+
 ## Events
 
 | Name | Description | Data |

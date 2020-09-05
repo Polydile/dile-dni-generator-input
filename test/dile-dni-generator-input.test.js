@@ -14,7 +14,7 @@ describe('DileDniGeneratorInput', () => {
       cancelable: true,
     });
     dniInput.dispatchEvent(inputEvent);
-    expect(el.dni).to.equal('71100766 - S');
+    expect(el.value).to.equal('71100766 - S');
   });
 
   it('should not calculate their dni related letter when the dni input length is less than 8 digits', async () => {
@@ -28,14 +28,14 @@ describe('DileDniGeneratorInput', () => {
       cancelable: true,
     });
     dniInput.dispatchEvent(inputEvent);
-    expect(el.dni).to.equal('711007');
+    expect(el.value).to.equal('711007');
   });
 
   it('should delete the user input on backspace keydow', async () => {
     const el = await fixture(html`
       <dile-dni-generator-input></dile-dni-generator-input>
     `);
-    el.dni = '71100766 - S';
+    el.value = '71100766 - S';
     const callback = sinon.spy();
     el.addEventListener('backspace-pressed', callback, { once: true });
     const dniInput = el.shadowRoot.getElementById('dniGenerator');
@@ -45,7 +45,7 @@ describe('DileDniGeneratorInput', () => {
     });
     keyDownEvent.keyCode = 8;
     dniInput.dispatchEvent(keyDownEvent);
-    expect(el.dni).to.equal('');
+    expect(el.value).to.equal('');
     expect(callback).called;
   });
 
@@ -53,7 +53,7 @@ describe('DileDniGeneratorInput', () => {
     const el = await fixture(html`
       <dile-dni-generator-input></dile-dni-generator-input>
     `);
-    el.dni = '711';
+    el.value = '711';
     const dniInput = el.shadowRoot.getElementById('dniGenerator');
     const keyDownEvent = new Event('keydown', {
       bubbles: true,
@@ -61,14 +61,14 @@ describe('DileDniGeneratorInput', () => {
     });
     keyDownEvent.keyCode = 8;
     dniInput.dispatchEvent(keyDownEvent);
-    expect(el.dni).to.equal('711');
+    expect(el.value).to.equal('711');
   });
 
   it('should not delete the user input when other key different to backspace is down', async () => {
     const el = await fixture(html`
       <dile-dni-generator-input></dile-dni-generator-input>
     `);
-    el.dni = '711';
+    el.value = '711';
     const dniInput = el.shadowRoot.getElementById('dniGenerator');
     const keyDownEvent = new Event('keydown', {
       bubbles: true,
@@ -76,7 +76,7 @@ describe('DileDniGeneratorInput', () => {
     });
     keyDownEvent.which = 9;
     dniInput.dispatchEvent(keyDownEvent);
-    expect(el.dni).to.equal('711');
+    expect(el.value).to.equal('711');
   });
 
   it('should receive the label attribute', async () => {

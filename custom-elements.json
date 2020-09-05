@@ -26,7 +26,20 @@
       ],
       "events": ["backspace-pressed"],
       "slots": [],
-      "cssProperties": []
+      "cssProperties": [
+        {
+          "name": "--dile-dni-generator-input-label-font-family",
+          "description": "Font family for the input "
+        },
+        {
+          "name": "--dile-dni-generator-input-font-family",
+          "description": "Font family for the label "
+        },
+        {
+          "name": "--dile-dni-generator-input-label-padding",
+          "description": "Padding for the label "
+        },
+      ]
     }
   ]
 }

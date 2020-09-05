@@ -47,7 +47,6 @@ export const CustomDNI = () => html`
   <style>
   .customized {
     --dile-input-border-radius: 16px;
-    --dile-input-label-margin-bottom: 12px;
     }
   </style>
 

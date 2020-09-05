@@ -11,6 +11,30 @@ export class DileDniGeneratorInput extends DileInput {
     this.letters = 'TRWAGMYFPDXBNJZSQVHLCKE';
   }
 
+  static get styles() {
+    return [
+      super.styles,
+      css`button { color: red; }`,
+      css`
+        label {
+          padding: var(--dile-dni-generator-input-label-padding, 0.5em);
+          font-family: var(--dile-dni-generator-input-label-font-family, Helvetica, sans-serif);
+        }
+        input {
+          font-family: var(--dile-dni-generator-input-font-family, Helvetica, sans-serif);
+       }
+       input::-webkit-outer-spin-button,
+       input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+       }
+       input[type=number] {
+         -moz-appearance: textfield;
+       }
+      `
+    ];
+  } 
+
   render() {
     return html`
       <div>
@@ -39,7 +63,7 @@ export class DileDniGeneratorInput extends DileInput {
   }
 
   _calculateLetter() {
-    return this.letters.charAt(this.dni % 23);
+    return this.letters.charAt(this.value % 23);
   }
 
   _lookForBackSpace(e) {
